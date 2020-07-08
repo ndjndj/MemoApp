@@ -55,7 +55,7 @@ const styles = StyleSheet.create({
     shadowRadius: 3,
   },
   circleButtonTitle: {
-    fontSize: 32,
+    fontSize: 24,
     lineHeight: 32,
     color: '#fff',
     fontFamily: 'FontAwesome',
