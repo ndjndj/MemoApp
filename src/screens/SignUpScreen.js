@@ -7,15 +7,15 @@ import {
   TouchableHighlight,
 } from 'react-native';
 
-class LoginScreen extends React.Component {
+class SignUpScreen extends React.Component {
   render() {
     return (
       <View style={styles.container}>
-        <Text styles={styles.title}>ログイン</Text>
+        <Text styles={styles.title}>メンバー登録</Text>
         <TextInput style={styles.input} value="Email Address" />
         <TextInput value="Password" />
-        <TouchableHighlight style={styles.button} onPress={() => {}}>
-          <Text style={styles.buttonTitle}>ログインする</Text>
+        <TouchableHighlight style={styles.button} onPress={() => {}} underlayColor="#c70f66">
+          <Text style={styles.buttonTitle}>送信する</Text>
         </TouchableHighlight>
       </View>
     );
@@ -57,4 +57,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default LoginScreen;
+export default SignUpScreen;
