@@ -11,9 +11,9 @@ class LoginScreen extends React.Component {
   render() {
     return (
       <View style={styles.container}>
-        <Text styles={styles.title}>ログイン</Text>
+        <Text style={styles.title}>ログイン</Text>
         <TextInput style={styles.input} value="Email Address" />
-        <TextInput value="Password" />
+        <TextInput style={styles.input} value="Password" />
         <TouchableHighlight style={styles.button} onPress={() => {}}>
           <Text style={styles.buttonTitle}>ログインする</Text>
         </TouchableHighlight>
