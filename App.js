@@ -8,6 +8,20 @@ import SignUpScreen from './src/screens/SignUpScreen';
 
 const App = createStackNavigator({
   Home: { screen: MemoListScreen },
+  MemoDetail: { screen: MemoDetailScreen },
+  MemoEdit: { screen: MemoEditScreen },
+  Login: { screen: LoginScreen },
+  SignUp: { screen: SignUpScreen },
+}, {
+  defaultNavigationOptions: {
+    headerTitle: 'Memott',
+    headerStyle: {
+      backgroundColor: '#265366',
+    },
+    headerTitleStyle: {
+      color: '#fff',
+    },
+  },
 });
 
 export default createAppContainer(App);
