@@ -2,7 +2,7 @@ import React from 'react';
 import { StyleSheet, View, TouchableHighlight } from 'react-native';
 import * as Font from 'expo-font';
 import { createIconSet } from '@expo/vector-icons';
-import fontAwesome from '../../assets/fonts/fa-solid-900.ttf';
+import fontAwsome from '../../assets/fonts/fa-solid-900.ttf';
 
 const CustomIcon = createIconSet({
   pencil: '\uf303',
@@ -12,13 +12,14 @@ const CustomIcon = createIconSet({
 
 class CircleButton extends React.Component {
   // eslint-disable-next-line react/state-in-constructor
-  state = { fontLoaded: false };
+  state = {
+    fontLoaded: false,
+  };
 
   async componentDidMount() {
     await Font.loadAsync({
-      FontAwesome: fontAwesome,
+      FontAwesome: fontAwsome,
     });
-
     this.setState({ fontLoaded: true });
   }
 
@@ -38,7 +39,7 @@ class CircleButton extends React.Component {
     }
 
     return (
-      <TouchableHighlight style={[styles.container, style]} onPress={onPress} underlayColor="tranceparent">
+      <TouchableHighlight style={[styles.container, style]} onPress={onPress} underlayColor="transparent">
         <View style={[styles.circleButton, { backgroundColor: bgColor }]}>
           {
             this.state.fontLoaded ? (
@@ -73,8 +74,6 @@ const styles = StyleSheet.create({
   circleButtonTitle: {
     fontSize: 24,
     lineHeight: 32,
-    color: '#fff',
-    fontFamily: 'FontAwesome',
   },
 });
 
