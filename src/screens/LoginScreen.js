@@ -8,12 +8,26 @@ import {
 } from 'react-native';
 
 class LoginScreen extends React.Component {
+  // eslint-disable-next-line react/state-in-constructor
+  state = {
+    email: '',
+    password: '',
+  }
+
+  handleChangeText(text) {
+    this.setState({ email: text });
+  }
+
   render() {
     return (
       <View style={styles.container}>
         <Text style={styles.title}>ログイン</Text>
-        <TextInput style={styles.input} value="Email Address" />
-        <TextInput style={styles.input} value="Password" />
+        <TextInput
+          style={styles.input}
+          value={this.state.email}
+          onChangeText={this.handleChangeText.bind(this)}
+        />
+        <TextInput style={styles.input} value={this.state.password} />
         <TouchableHighlight style={styles.button} onPress={() => { this.props.navigation.navigate('Home'); }}>
           <Text style={styles.buttonTitle}>ログインする</Text>
         </TouchableHighlight>
